@@ -1,5 +1,5 @@
 // part 01
-//var name = prompt('What is your name ?');
+var name = prompt('What is your name ?');
 
 if (name) {
   console.log('Welcome ' + name);
