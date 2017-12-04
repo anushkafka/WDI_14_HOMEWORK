@@ -1,0 +1,38 @@
+body {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.container {
+  width: 1000px;
+}
+.text h2{
+  color: rgba(128, 128, 128, 0.879);
+  font-size: 20px;
+}
+.text h3{
+  color: rgb(130, 204, 247);
+  font-size: 14px;
+}
+.text{
+  width: 100%;
+}
+.text p{
+  color: rgba(128, 128, 128, 0.708);
+  font-size: 14px;
+}
+.footerImg img{
+  border: 3px solid rgba(128, 128, 128, 0.468);
+}
+.footerImg{
+  position:relative;
+  display: inline-block;
+  white-space:nowrap;
+}
+.text a{
+  color: rgb(130, 204, 247);
+}
+.copyright{
+  color: rgba(128, 128, 128, 0.708);
+  font-size: 9px;
+}

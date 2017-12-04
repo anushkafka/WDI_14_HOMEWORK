@@ -1,0 +1,45 @@
+body {
+  background-color: lightgray;
+}
+
+header{
+  background-image: url('../images/background.jpg');
+}
+.logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+.content {
+  display: flex;
+  width: 1000px;
+}
+.left {
+  flex: 3;
+  margin-right: 20px;
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+}
+.right {
+  flex: 1;
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+}
+.block h1{
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.728);
+}
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+footer > img {
+  margin: 10px;
+}
