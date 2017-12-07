@@ -25,43 +25,41 @@
   <main>
     <div class="block1">
       <h2>SAVINGS</h2>
-      <h5>Your balance is...</h5>
-      <h1>$ 0.00</h1>
-      <div class="box">
-        <p>ENTER AMOUNT HERE</p>
+      <div class="balance">
+        <h5>Your balance is...</h5>
+        <!--<p>$</p> -->
+        <span class="s-total">0.00</span>
       </div>
+
+
+      <input class="s-box" type="text" placeholder="ENTER AMOUNT HERE">
+
       <div class="button-center">
         <div class="button-row">
-          <div class="button">
-            <h3>WITHDRAW</h3>
-          </div>
-          <div class="button">
-            <h3>DEPOSIT</h3>
-          </div>
+          <button class="button" id="s-withdraw">WITHDRAW</button>
+          <button class="button" id="s-deposit">DEPOSIT</button>
         </div>
       </div>
     </div>
     <div class="block2">
       <h2>CHECKING</h2>
-      <h5>Your balance is...</h5>
-      <h1>$ 0.00</h1>
-      <div class="box">
-        <p>ENTER AMOUNT HERE</p>
+      <div class="balance">
+        <h5>Your balance is...</h5>
+
+        <!--<p>$</p> -->
+        <span class="c-total">0.00</span>
       </div>
+      <input class="c-box" type="text" placeholder="ENTER AMOUNT HERE">
+
       <div class="button-center">
         <div class="button-row">
-          <div class="button">
-            <h3>WITHDRAW</h3>
-          </div>
-          <div class="button">
-            <h3>DEPOSIT</h3>
-          </div>
+          <button class="button" id="c-withdraw">WITHDRAW</button>
+          <button class="button" id="c-deposit">DEPOSIT</button>
         </div>
-
       </div>
     </div>
   </main>
-
+  <script src="app.js"></script>
 </body>
 
 </html>
