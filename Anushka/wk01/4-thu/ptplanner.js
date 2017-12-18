@@ -4,8 +4,8 @@ var line3 = ['southerncross', 'richmond', 'southyarra', 'prahran', 'windsor'];
 
 var lines = [line1, line2, line3];
 
-var start = 'melbournecentral';
-var end = 'burnley';
+var start = 'burnley';
+var end = 'flindersstreet';
 var finalArray = [];
 var tempArray = [];
 
@@ -18,10 +18,8 @@ function getLineWhichContainsStop(stopToFind) {
         lineHasStop = true;
       }
     });
-
     return lineHasStop;
   });
-
   return lines[indexOfLine];
 }
 
@@ -32,7 +30,7 @@ var endLine = getLineWhichContainsStop(end);
 // if same line
 if (startline === endLine) {
   var line = startline;
-  //console.log(startline);
+  //there is an edge case if going backwards
   finalArray = line.slice(line.indexOf(start), line.indexOf(end + 1));
 
 } else { // if two different lines

@@ -9,6 +9,9 @@ var checkDepositBtn = document.querySelector('#c-deposit');
 var checkTot = Number(document.querySelector('.c-total').textContent);
 
 function add(input, flag) {
+  if (input < 0) {
+    input = 0;
+  }
   switch (flag) {
     case 'save':
       savingsTot = savingsTot + input;
@@ -20,7 +23,6 @@ function add(input, flag) {
       checkTot = checkTot + input;
       setBackground(flag);
       editDom('.c', checkTot);
-      console.log('c')
   }
 }
 function subtract(input, flag) {
