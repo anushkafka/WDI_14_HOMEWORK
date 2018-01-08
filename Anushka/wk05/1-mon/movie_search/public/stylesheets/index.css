@@ -1,0 +1,16 @@
+body{
+  margin: 0 auto;
+  background-image: url("/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.search{
+  width: 500px;
+  height: 200px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: rgba(52, 73, 94, 0.7);
+  margin-top: 150px;
+  border-radius: 4px;
+}
