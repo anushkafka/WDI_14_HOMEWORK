@@ -7,10 +7,46 @@ body{
 
 .search{
   width: 500px;
-  height: 200px;
+  height: 280px;
   text-align: center;
   margin: 0 auto;
-  background-color: rgba(52, 73, 94, 0.7);
+  background-color: rgba(0, 0, 0, 0.584);
   margin-top: 150px;
   border-radius: 4px;
+}
+
+.search img{
+  width: 250px;
+  height: 200px;
+  margin-top: -60px;
+  margin-bottom: 30px;
+}
+
+.search-box{
+  display: inline-flex;
+  font-size: 18px;
+}
+input{
+  height: 35px;
+  width: 300px;
+  font-size: inherit;
+  border: 2px solid rgba(0, 0, 0, 0.057);
+  background-color: rgba(255, 255, 255, 0.797);
+  padding-left: 15px;
+  border-radius: 0.5em 0 0 0.4em ;
+}
+
+.bttn_search{
+  font-size: inherit;
+  background-color: rgba(82, 79, 79, 0.79);
+  border: 2px solid rgba(0, 0, 0, 0.057);
+  border-radius: 0 0.4em 0.4em 0;
+  padding: 0 0.7em;
+  color: white;
+  cursor: pointer;
+}
+
+.bttn_search:hover,
+.bttn_search:focus{
+  background-color: rgba(82, 79, 79, 0.927);
 }
