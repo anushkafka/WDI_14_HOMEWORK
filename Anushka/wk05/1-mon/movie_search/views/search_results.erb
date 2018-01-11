@@ -18,6 +18,12 @@
       </div>
     <% end %>
   </div>
+  <div class="page-break">
+    View:
+    <% querry_string = '/movie_list?movies='+@input%>
+    <% $page_no += 1%>
+    <a href=<%=querry_string%> >More title matches</a>
+  </div>
 </body>
 </html>
 

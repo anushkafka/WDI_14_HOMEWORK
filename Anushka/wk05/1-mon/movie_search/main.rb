@@ -6,10 +6,14 @@ require 'pry'
 get '/' do
   erb :index
 end
-
+$page_no = 1
 get '/movie_list' do
   search_key = params["movies"]
-  response = HTTParty.get('http://www.omdbapi.com/?s='+search_key+'&apikey=ef858bce')
+  @input = search_key
+  
+  url = 'http://www.omdbapi.com/?s='+search_key+'&page='+$page_no.to_s+'&apikey=ef858bce'
+
+  response = HTTParty.get(url)
 
   @movie_list = Array.new
   response.parsed_response["Search"].each do |movie|

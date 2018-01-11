@@ -1,6 +1,6 @@
 .row{
   display: grid;
-  grid-template-columns: 15% 85%
+  grid-template-columns: 8% 92%
 }
 
 .grid > .row {
@@ -17,8 +17,8 @@
   border: 1px solid rgba(0, 0, 0, 0.7);
   border-radius: 4px;
   padding: 5px;
-  width: 40%;
-  height: 40%;
+  width: 38%;
+  height: 38%;
 }
 
 .title a{
