@@ -14,7 +14,7 @@ get '/movie_list' do
   url = 'http://www.omdbapi.com/?s='+search_key+'&page='+$page_no.to_s+'&apikey=ef858bce'
 
   response = HTTParty.get(url)
-
+  binding.pry
   @movie_list = Array.new
   response.parsed_response["Search"].each do |movie|
       # @title_list << movie["Title"]
