@@ -1,6 +1,6 @@
 
     <div class="search-container">
-      <form></form>
+      
       <div class="ui icon input">
         <input class="search-input" type="text" placeholder="Search pokemon here..">
         <i class="search icon"></i>
@@ -9,34 +9,37 @@
     </div>
 
     <div class="results-container">
-      <div class="ui card">
+      <div class="ui purple card">
         <div class="image">
       
         </div>
         <div class="content">
           <a class="header"></a>
           <div class="meta">
-            <span class="date">Joined in 2013</span>
+            <span class="date"></span>
           </div>
           <div class="description">
-            Kristy is an art director living in New York.
+        
           </div>
         </div>
         <div class="extra content">
-          <a>
-            <i class="paw icon"></i>
-            
+          <a>  
             <div class="ui icon input">
               <input type="text" placeholder="Enter level here..">
+              <i class="paw icon"></i>
             </div>
           </a>
         </div>
-
-        <div class="ui bottom attached button">
+        <form action="/pokemon" method="post">
+          <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
+          <div class="ui bottom attached button">
           <i class="add icon"></i>
           Add Pokemon
-        </div>
+          </div>
+        </form>
+        
       </div>
+      
       
     </div>
 

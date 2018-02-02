@@ -15,7 +15,19 @@ $(document).ready(function() {
       imgElem.src = res.sprites.front_shiny;
       document.querySelector(".image").appendChild(imgElem);
 
+      imgHidden = document.createElement("input");
+      imgHidden.name = "image";
+      imgHidden.value = res.sprites.front_shiny;
+
+      nameHidden = document.createElement("input");
+      nameHidden.name = "name";
+      nameHidden.value = res.name;
+
       document.querySelector(".header").textContent = res.name;
     });
   });
 });
+
+function savePokemon() {
+  console.log("hi");
+}
