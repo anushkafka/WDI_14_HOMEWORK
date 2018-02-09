@@ -7,7 +7,6 @@ $(document).ready(function() {
   $(".search-btn").click(function() {
     options.url = options.url + document.querySelector(".search-input").value;
     +"/";
-    debugger;
     $.ajax(options).done(function(res) {
       console.log(res);
 
