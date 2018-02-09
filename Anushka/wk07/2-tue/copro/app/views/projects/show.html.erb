@@ -1,0 +1,46 @@
+<h1><%project = Project.find(params[:id])%><h2>
+<div><%=project.user_id %></div>
+
+<div class="container">
+  <div class="detail-img">
+    <img src="<%=project.preview %>">
+    <% if @project.likes.count > 0%>
+      <span class="red-heart">&#x1F496;</span>
+    <% else%>
+      <span class="white-heart">&#x2661;</span>
+    <% end %>
+  </div>
+
+  <form action="/likes" method="post">
+    <span class="likes-count"> <%=@project.likes.count%> </span>
+    <input type="hidden" name="authenticity_token" value="form_authenticity_token"></input>
+    <input type="hidden" name="project_id" value="<%=project.id%>">
+    <button>like</button>
+  </form>
+  <div class="comments">
+    <div class="add">
+      <form action="/comments" method="post">
+        <input type="hidden" name="authenticity_token" value="form_authenticity_token"></input>
+        <input type="hidden" name="project_id" value="<%=project.id%>">
+        <input type="text" name="comment">
+        <button>comment</button>
+      </form>
+    </div>
+    <div class="display">
+    <%@comments.each do |comment|%>
+      <p><%= comment.comment %></p>
+    <%end %> 
+    </div>
+  </div>
+</div>
+<script src=“https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js“></script>
+<script>
+  var heart_elem = document.querySelector('.detail-img span');
+  heart_elem.addEventListener('click', function(event){
+    var likes_count_elem = event.target.closest('.container').querySelector('.likes-count')
+    likes_count_elem.textContent = parseInt(likes_count_elem.textContent) + 1;
+    if(likes_count_elem.textContent > 0){
+      event.target.closest('.container').querySelector('.white-heart').innerHTML = '&#x1F496;'
+    }
+  });
+</script>
